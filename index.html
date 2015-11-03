@@ -1,0 +1,118 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>Pomodoro Timer</title>
+	<meta name="description" content="The HTML5 Herald">
+	<meta name="author" content="SitePoint">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+
+	<style>
+		body{
+			padding: 0;
+			margin: 0px 50px;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-weight: 300;
+			text-rendering: optimizelegibility;
+			padding-top: 50px;
+			background-color: #222 !important;
+			color: white;
+		}
+		p{font-size: 30px; line-height: 30px}
+		div.demo{text-align: center; width: 280px; float: left}
+		div.demo > p{font-size: 20px}
+	</style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <span class="navbar-brand">Pomodoro Timer</span>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="http://sabahang.github.io/">About Author</a></li>
+            <li><a href="#about" role="button" data-toggle="modal">About Pomodoro Timer</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<!-- 	<div class="timers">
+	<input class="knob" type="text">
+	<input class="knob2" type="text">
+</div> -->
+
+	<h1 class="text-left" style="padding-left: 53px;padding-bottom: 50px;">The Pomodoro Timer</h1>
+	<div class="container">
+		<div class="form-horizontal">
+			<div class="form-group">
+				<div class="col-sm-2" style="margin: 12px auto;text-align: center;">
+					<label>Session Length <input class="form-control session_length" type="text"></label>
+					<label>Break Length <input class="form-control break_length" type="text"></label>
+				</div>
+
+			</div>
+			<div class="form-group">
+				<div class="col-sm-2">
+					<button class="btn btn-default" id="terminate">Terminate</button>
+					<button class="btn btn-default" id="start">Start</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<div style="position: relative; width: 350px;margin: 0 auto;margin-top: -164px;">
+					<div style="position:absolute;left:10px;top:10px">
+						<input class="knob session" data-bgColor="#333" data-fgColor="#0000ff" data-displayInput=false data-width="300" data-height="300" data-thickness=".3">
+					</div>
+					<div style="position:absolute;left:60px;top:60px">
+						<input class="knob break" data-bgColor="#333" data-fgColor="#ff0000" data-displayInput=false data-width="200" data-height="200" data-thickness=".45">
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+	<div class="modal fade" id="about" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="color:black">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">About Quote Generator</h4>
+	      </div>
+	      <div class="modal-body">
+	        This app was made as a part of Free Code Camp full-stack developer curriculum. This is a completely free self-paced course aimed at any audience from novice to experienced. Please consider contributing and checking it out at <a href="http://www.freecodecamp.com">www.freecodecamp.com</a>. <br>
+	        You can check my profile at <a href="http://www.freecodecamp.com/sabahang">freecodecamp.com/sabahang</a>
+	        <br>
+	        <br>
+	        Last update: 3 November 2015
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="scripts/jquery.knob.min.js"></script>
+	<script src="scripts/timer.js"></script>
+</body>
+</html>
