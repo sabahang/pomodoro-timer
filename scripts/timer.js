@@ -28,8 +28,6 @@ $('#terminate').click(function(){
 });
 
 $('#start').click(function(){
-    // $('.knob').
-    //     timer({'timer':parseInt(sessionLength, 10)});
     sessionKnob.config(parseInt(sessionLength, 10));
     sessionIntervalId = startTimer(sessionKnob);
     $(".session_length").prop('disabled', true);
@@ -73,13 +71,7 @@ jQuery(function($) {
             console.log("session change : " + value);
         },
         release : function (value) {
-            //console.log(this.$.attr('value'));
-             console.log("session release : " + value);
-             
-             // if (value == '0'  ){
-             //    resetTimer(breakKnob);
-             // }
-            // while ($(this) <= sessionLength){
+            //console.log("session release : " + value);
             if (value == sessionLength){
                 stopTimer(sessionIntervalId);
                 breakKnob.config(parseInt(breakLength, 10));
@@ -96,8 +88,7 @@ jQuery(function($) {
             console.log("break change : " + value);
         },
         release : function (value) {
-            //console.log(this.$.attr('value'));
-            console.log("break release : " + value);
+            //console.log("break release : " + value);
 
             if (value == breakLength){
                 stopTimer(breakIntervalId);
